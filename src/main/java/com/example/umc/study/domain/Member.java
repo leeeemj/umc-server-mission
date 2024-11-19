@@ -8,6 +8,9 @@ import com.example.umc.study.domain.mapping.MemberMission;
 import com.example.umc.study.domain.mapping.MemberPrefer;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -18,6 +21,8 @@ import java.util.List;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@DynamicUpdate
+@DynamicInsert
 public class Member extends BaseEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -30,9 +35,12 @@ public class Member extends BaseEntity {
     private String address;
 
     private LocalDate inactiveDate;
-    @Column(nullable = false, length = 50)
+
+//    @Column(nullable = true, length = 50)
     private String email;
-    private Long point;
+
+    @ColumnDefault("0")
+    private Integer point;
 
     //enum적용
     @Enumerated(EnumType.STRING)
