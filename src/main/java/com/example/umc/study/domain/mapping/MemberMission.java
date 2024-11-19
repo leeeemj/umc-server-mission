@@ -10,6 +10,7 @@ import lombok.*;
 
 @Entity
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -28,6 +29,7 @@ public class MemberMission extends BaseEntity {
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="member_id")
     private Member member;
+
     //mission
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="mission_id")
