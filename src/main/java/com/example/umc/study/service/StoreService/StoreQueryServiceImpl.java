@@ -34,7 +34,6 @@ public class StoreQueryServiceImpl implements StoreQueryService{
 
         return filteredStores;
     }
-
     @Override
     public Page<Review> getReviewList(Long StoreId, Integer page) {
 

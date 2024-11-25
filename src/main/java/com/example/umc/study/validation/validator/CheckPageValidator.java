@@ -14,7 +14,7 @@ public class CheckPageValidator implements ConstraintValidator<CheckPage, Intege
 
     @Override
     public boolean isValid(Integer page, ConstraintValidatorContext constraintValidatorContext) {
-        //page가 1 이상인지 확인
+        //page가 1 이상인지 확인하기
         boolean isValid = page != null && page >= 1;
         if (!isValid) {
             constraintValidatorContext.disableDefaultConstraintViolation();

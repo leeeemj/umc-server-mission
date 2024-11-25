@@ -19,6 +19,7 @@ public class StoreResponseDTO {
         Boolean isFirst;
         Boolean isLast;
     }
+
     @Builder
     @Getter
     @NoArgsConstructor

@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 
 @Component
 public class StoreConverter {
-
     public static Store toStore(StoreRequestDTO.CreateStoreDto request, Region region) {
         return Store.builder()
                 .name(request.getName())
@@ -21,6 +20,8 @@ public class StoreConverter {
                 .region(region)
                 .build();
     }
+
+    //리뷰관련
     public static StoreResponseDTO.ReviewPreViewDTO reviewPreViewDTO(Review review){
         return StoreResponseDTO.ReviewPreViewDTO.builder()
                 .ownerNickname(review.getMember().getNickname())

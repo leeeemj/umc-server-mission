@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class CheckPageAspect {
-    //Pointcut으로 실행되는 시기 제어
     @Pointcut("@annotation(com.example.umc.study.validation.annotation.CheckPage)")
     public void checkPageAnnotation() {}
 
