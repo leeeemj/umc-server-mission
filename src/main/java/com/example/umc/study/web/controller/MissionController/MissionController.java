@@ -32,4 +32,7 @@ public class MissionController {
             Long memberMissionId = missionCommandService.startMission(request);
             return ApiResponse.onSuccess(memberMissionId);
     }
+
+    //내가 진행중인 미션 목록 조회
+
 }

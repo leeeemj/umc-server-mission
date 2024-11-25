@@ -22,7 +22,7 @@ public class StoreCommandServiceImpl implements StoreCommandService {
 
     @Transactional
     @Override
-    public Long createStore(StoreRequestDTO.CreateDto request) {
+    public Long createStore(StoreRequestDTO.CreateStoreDto request) {
         //region id에 해당하는 지역 찾기
         Region region = regionRepository.findById(request.getRegionId())
                 .orElseThrow(() -> new RegionHandler(ErrorStatus.REGION_NOT_FOUND));

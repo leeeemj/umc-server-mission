@@ -1,4 +1,4 @@
-package com.example.umc.study.service.TempService.query;
+package com.example.umc.study.service.TempService;
 
 import com.example.umc.study.ApiResponse.code.status.ErrorStatus;
 import com.example.umc.study.ApiResponse.exception.handler.TempHandler;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class TempQueryServiceImpl implements TempQueryService{
+public class TempQueryServiceImpl implements TempQueryService {
 
     @Override
     public void CheckFlag(Integer flag) {

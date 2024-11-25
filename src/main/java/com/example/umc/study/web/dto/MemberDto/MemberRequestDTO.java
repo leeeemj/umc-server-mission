@@ -16,9 +16,7 @@ public class MemberRequestDTO {
         String nickname;
         @NotNull
         Integer gender;
-//        Integer birthYear;
-//        Integer birthMonth;
-//        Integer birthDay;
+
         @Size(min = 5, max = 12)
         String address;
         @ExistCategories

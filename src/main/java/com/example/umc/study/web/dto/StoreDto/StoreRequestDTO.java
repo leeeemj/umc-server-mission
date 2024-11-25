@@ -6,7 +6,7 @@ import lombok.Getter;
 public class StoreRequestDTO {
 
     @Getter
-    public static class CreateDto {
+    public static class CreateStoreDto {
 
         @NotBlank
         @Size(max = 20)
