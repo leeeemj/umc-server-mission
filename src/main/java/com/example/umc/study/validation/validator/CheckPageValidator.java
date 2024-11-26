@@ -21,6 +21,7 @@ public class CheckPageValidator implements ConstraintValidator<CheckPage, Intege
             constraintValidatorContext.buildConstraintViolationWithTemplate(ErrorStatus.INVALID_PAGE.toString())
                     .addConstraintViolation();
         }
+
         return isValid;
     }
 }

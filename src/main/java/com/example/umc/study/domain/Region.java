@@ -1,12 +1,8 @@
 package com.example.umc.study.domain;
 
 import com.example.umc.study.domain.common.BaseEntity;
-import com.example.umc.study.domain.mapping.MemberMission;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Entity

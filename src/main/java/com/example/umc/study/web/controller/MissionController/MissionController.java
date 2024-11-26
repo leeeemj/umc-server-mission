@@ -33,6 +33,5 @@ public class MissionController {
             return ApiResponse.onSuccess(memberMissionId);
     }
 
-    //내가 진행중인 미션 목록 조회
 
 }

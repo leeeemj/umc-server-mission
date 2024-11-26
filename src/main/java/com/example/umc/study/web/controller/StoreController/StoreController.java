@@ -42,7 +42,7 @@ public class StoreController {
         return ApiResponse.onSuccess(storeId);
     }
 
-    //리뷰 조회
+    //특정 가게 리뷰 조회
     @GetMapping("/{storeId}/reviews")
     @Operation(summary = "특정 가게의 리뷰 목록 조회 API",description = "특정 가게의 리뷰들의 목록을 조회하는 API이며, 페이징을 포함합니다. query String 으로 page 번호를 주세요")
     @ApiResponses({
@@ -57,7 +57,10 @@ public class StoreController {
     public ApiResponse<StoreResponseDTO.ReviewPreViewListDTO> getReviewList(
             @ExistStores @PathVariable(name = "storeId") Long storeId,
             @CheckPage @RequestParam(name = "page") Integer page){
+        page =-1;
         Page<Review> reviewList = storeQueryService.getReviewList(storeId, page);
+        System.out.println("page"+page);
+
         return ApiResponse.onSuccess(StoreConverter.reviewPreViewListDTO(reviewList));
     }
 
