@@ -1,1 +1,8 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal() // Gradle Plugin Portal 추가
+        mavenCentral()
+    }
+}
 rootProject.name = 'umc'
+

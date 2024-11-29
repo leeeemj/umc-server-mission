@@ -17,11 +17,10 @@ public class MemberConverter {
                 .build();
     }
 
-    public static Member toMember(MemberRequestDTO.JoinDto request){
+    public static Member toMember(MemberRequestDTO.JoinDto request) {
 
         Gender gender = null;
-
-        switch (request.getGender()){
+        switch (request.getGender()) {
             case 1:
                 gender = Gender.MALE;
                 break;
@@ -31,10 +30,14 @@ public class MemberConverter {
         }
 
         return Member.builder()
+                .email(request.getEmail())
+                .password(request.getPassword())
                 .address(request.getAddress())
+                .specAddress(request.getSpecAddress())
                 .gender(gender)
-                .nickname(request.getNickname())
-                .memberPreferList(new ArrayList<>()) //리스트 초기화
+                .name(request.getName())
+                .role(request.getRole())
+                .memberPreferList(new ArrayList<>())
                 .build();
     }
 }
