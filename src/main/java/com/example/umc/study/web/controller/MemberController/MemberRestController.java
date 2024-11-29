@@ -80,7 +80,7 @@ public class MemberRestController {
     public ApiResponse<MissionResponseDTO.MemberMissionPreViewListDTO> getMemberMissionList(
             @PathVariable(name = "memberId") Long memberId,
             @CheckPage @RequestParam(name = "page") Integer page){
-        page = page -1;
+//        page = page -1;
         Page<MemberMission> missionList=storeQueryService.getMemberMissionList(memberId,page);
         System.out.println("page"+page);
         return ApiResponse.onSuccess(MissionConverter.missionPreViewListDTO(missionList));
