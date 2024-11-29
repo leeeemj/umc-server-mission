@@ -2,7 +2,7 @@ package com.example.umc.study.web.controller;
 
 import com.example.umc.study.ApiResponse.ApiResponse;
 import com.example.umc.study.converter.TempConverter;
-import com.example.umc.study.service.TempService.query.TempQueryService;
+import com.example.umc.study.service.TempService.TempQueryService;
 import com.example.umc.study.web.dto.TempResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
