@@ -19,7 +19,7 @@ public class MissionConverter {
             return null;
         }
         return MissionResponseDTO.MemberMissionPreViewDTO.builder()
-                .memberName(mission.getMember().getNickname())
+                .memberName(mission.getMember().getName())
                 .storeName(mission.getMission().getStore().getName())
                 .reward(mission.getMission().getReward())
                 .missionSpec(mission.getMission().getMissionSpec())

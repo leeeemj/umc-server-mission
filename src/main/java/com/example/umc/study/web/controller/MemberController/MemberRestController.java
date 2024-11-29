@@ -26,6 +26,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,6 +38,7 @@ public class MemberRestController {
 
     private final MemberCommandService memberCommandService;
     private final StoreQueryService storeQueryService;
+
 
 
     @PostMapping("/")
@@ -85,4 +87,5 @@ public class MemberRestController {
         System.out.println("page"+page);
         return ApiResponse.onSuccess(MissionConverter.missionPreViewListDTO(missionList));
     }
+
 }
